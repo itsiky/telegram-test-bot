@@ -27,13 +27,14 @@ module.exports = async (request, response) => {
              {
                 const msg = ` You asked for help !! 👋🏻`;
                 await bot.sendMessage(id, msg, {parse_mode: 'Markdown'});
-             } 
-            // Create a message to send back
-            // We can use Markdown inside this
-            const message = `✅ Thanks for the message: *"${text}"*\nHave a great day! 👋🏻`;
+             } else {
+                // Create a message to send back
+                // We can use Markdown inside this
+                const message = `✅ Thanks for the message: *"${text}"*\nHave a great day! 👋🏻`;
 
-            // Send our new message back in Markdown
-            await bot.sendMessage(id, message, {parse_mode: 'Markdown'});
+                // Send our new message back in Markdown
+                await bot.sendMessage(id, message, {parse_mode: 'Markdown'});
+             }
         }
     }
     catch(error) {

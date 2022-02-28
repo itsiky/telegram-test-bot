@@ -23,6 +23,11 @@ module.exports = async (request, response) => {
             // and the text that the user sent
             const { chat: { id }, text } = body.message;
 
+            if (text == '/help)
+             {
+                const msg = ` You asked for help !! 👋🏻`;
+                await bot.sendMessage(id, msg, {parse_mode: 'Markdown'});
+             }
             // Create a message to send back
             // We can use Markdown inside this
             const message = `✅ Thanks for your message: *"${text}"*\nHave a great day! 👋🏻`;

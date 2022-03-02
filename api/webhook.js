@@ -25,13 +25,15 @@ module.exports = async (request, response) => {
 
             if (text === "/help")
              {
-                const msg = ` You asked for help !! 👋🏻`;
+              //  const msg = ` You asked for help !! 👋🏻`;
+                const msg = ``;
                 await bot.sendMessage(id, msg, {parse_mode: 'Markdown'});
              } else {
                 // Create a message to send back
                 // We can use Markdown inside this
-                const message = `✅ Thanks for the message: *"${text}"*\nHave a great day! 👋🏻`;
-
+               // const message = `✅ Thanks for the message: *"${text}"*\nHave a great day! 👋🏻`;
+                const message = ``;
+    
                 // Send our new message back in Markdown
                 await bot.sendMessage(id, message, {parse_mode: 'Markdown'});
              }
